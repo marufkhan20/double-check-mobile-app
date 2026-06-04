@@ -1,6 +1,11 @@
 // Generates the Play Store feature graphic (1024x500) from SVG, matching the
 // app icon's obsidian + emerald theme.
 // Run: node scripts/generate-feature-graphic.js  ->  assets/feature-graphic.png
+//
+// NOTE: resvg emits a 32-bit RGBA PNG, but Google Play rejects feature graphics
+// that contain an alpha channel. After regenerating, flatten to 24-bit RGB:
+//   npm i --no-save sharp
+//   node -e "require('sharp')('assets/feature-graphic.png').flatten({background:'#000000'}).png().toFile('fg.png').then(()=>require('fs').renameSync('fg.png','assets/feature-graphic.png'))"
 
 const fs = require('fs');
 const path = require('path');

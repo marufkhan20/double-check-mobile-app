@@ -26,5 +26,10 @@
     "@babel/core": "^7.25.2",
     "babel-preset-expo": "~54.0.10"
   },
+  "overrides": {
+    "metro": "0.83.3",
+    "metro-config": "0.83.3",
+    "metro-transform-worker": "0.83.3"
+  },
   "private": true
 }
