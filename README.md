@@ -17,7 +17,8 @@ at a calming dashboard for peace of mind. 100% local, no backend.
 
 ## Tech
 
-- Expo SDK 52 / React Native 0.76 (functional components + hooks)
+- Expo SDK 54 / React Native 0.81 / React 19 (functional components + hooks)
+  — 16 KB page-size aligned for Google Play
 - `expo-haptics` for tactile feedback
 - `@react-native-async-storage/async-storage` for local persistence
 - No navigation library — a lightweight bottom tab bar switches the 3 views

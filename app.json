@@ -35,6 +35,12 @@
         "projectId": "c6af91c0-5cd9-40c2-9f2e-a8728f52805a"
       }
     },
-    "owner": "maruf32"
+    "owner": "maruf32",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/c6af91c0-5cd9-40c2-9f2e-a8728f52805a"
+    }
   }
 }

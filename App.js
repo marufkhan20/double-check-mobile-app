@@ -8,11 +8,11 @@ import {
   Animated,
   Easing,
   Pressable,
-  SafeAreaView,
   StyleSheet,
   Text,
   View,
 } from 'react-native';
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import { StatusBar } from 'expo-status-bar';
 import { Feather } from '@expo/vector-icons';
 
@@ -34,7 +34,7 @@ const TABS = [
   { key: 'manage', label: 'Manage', icon: 'sliders' },
 ];
 
-export default function App() {
+function AppContent() {
   const [tab, setTab] = useState('checklist');
   const [items, setItems] = useState([]);
   const [history, setHistory] = useState([]);
@@ -164,6 +164,16 @@ export default function App() {
         })}
       </View>
     </SafeAreaView>
+  );
+}
+
+// SafeAreaProvider supplies real inset values on Android (the react-native
+// SafeAreaView is a no-op there), so content clears the status and nav bars.
+export default function App() {
+  return (
+    <SafeAreaProvider>
+      <AppContent />
+    </SafeAreaProvider>
   );
 }
 
